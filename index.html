@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Automation Agency - Transform Your Business</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <nav>
+            <div class="logo">AI Automation Agency</div>
+            <button class="cta-button nav-cta" onclick="handleAssessmentRequest(event)">Get Free Assessment</button>
+        </nav>
+        <div class="hero-content">
+            <h1>Transform Your Business with AI Automation</h1>
+            <p class="hero-subtitle">Cut costs by 40% and save 20+ hours weekly with our AI-powered solutions</p>
+            <div class="hero-features">
+                <div class="feature">
+                    <span class="feature-icon">⚡</span>
+                    24/7 Customer Service
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🤖</span>
+                    AI-Powered Marketing
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">📈</span>
+                    Automated Growth
+                </div>
+            </div>
+            <button class="cta-button hero-cta" onclick="handleAssessmentRequest(event)">Schedule Your Free Digital Assessment</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our AI Solutions</h2>
+        
+        <div class="service-cards">
+            <!-- Customer Service Card -->
+            <div class="service-card">
+                <div class="card-header">
+                    <h3>Customer Service Automation</h3>
+                    <p>Perfect for: Restaurants, Hotels, Medical Practices</p>
+                </div>
+                <div class="price-tag">From $528/month</div>
+                <ul class="features-list">
+                    <li>24/7 AI Customer Support</li>
+                    <li>Instant Response System</li>
+                    <li>Smart Query Resolution</li>
+                    <li>Appointment Scheduling</li>
+                </ul>
+                <button class="learn-more" onclick="handleLearnMore('Customer Service Automation')">Learn More →</button>
+            </div>
+
+            <!-- Marketing Card -->
+            <div class="service-card">
+                <div class="card-header">
+                    <h3>Marketing Automation</h3>
+                    <p>Perfect for: Retail, Food Brands, Beauty Services</p>
+                </div>
+                <div class="price-tag">From $528/month</div>
+                <ul class="features-list">
+                    <li>AI Content Creation</li>
+                    <li>Social Media Automation</li>
+                    <li>Email Marketing</li>
+                    <li>Performance Analytics</li>
+                </ul>
+                <button class="learn-more" onclick="handleLearnMore('Marketing Automation')">Learn More →</button>
+            </div>
+
+            <!-- Custom Solutions Card -->
+            <div class="service-card">
+                <div class="card-header">
+                    <h3>Custom AI Solutions</h3>
+                    <p>Perfect for: Any Business</p>
+                </div>
+                <div class="price-tag">Custom Pricing</div>
+                <ul class="features-list">
+                    <li>Tailored AI Integration</li>
+                    <li>Process Automation</li>
+                    <li>Custom Analytics</li>
+                    <li>Priority Support</li>
+                </ul>
+                <button class="learn-more" onclick="handleLearnMore('Custom AI Solutions')">Learn More →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <h2>Transform Your Business in 90 Days</h2>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <span class="benefit-icon">💰</span>
+                <h4>Reduce Costs</h4>
+                <p>Cut operational expenses by up to 40% with AI automation</p>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon">⏰</span>
+                <h4>Save Time</h4>
+                <p>Automate repetitive tasks and save 20+ hours weekly</p>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon">🎯</span>
+                <h4>Boost Growth</h4>
+                <p>Increase customer engagement and drive more sales</p>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon">🌟</span>
+                <h4>Improve Service</h4>
+                <p>Deliver exceptional 24/7 customer experience</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Limited Time Offer</h2>
+            <h3>FREE Digital Business Assessment</h3>
+            <button class="cta-button" onclick="handleAssessmentRequest(event)">Claim Your Free Assessment</button>
+            
+            <div class="guarantee">
+                <ul>
+                    <li>No Long-Term Contracts</li>
+                    <li>Cancel Anytime</li>
+                    <li>30-Day Satisfaction Guarantee</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AI Automation Agency. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Assessment Modal -->
+    <div id="assessment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <form id="assessment-form" action="https://formsubmit.co/your-email@example.com" method="POST" onsubmit="submitAssessmentForm(event)">
+                <input type="hidden" name="_subject" value="New AI Automation Assessment Request">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://yourdomain.com/thanks">
+                <div class="form-group">
+                    <h3>Schedule Your Free Assessment</h3>
+                    <p>We'll contact you within 24 hours to schedule your personalized assessment.</p>
+                </div>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="business">Business Name</label>
+                    <input type="text" id="business" name="business" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">How can we help your business?</label>
+                    <textarea id="message" name="message" rows="3"></textarea>
+                </div>
+                <input type="hidden" id="service-input" name="service" value="">
+                <button type="submit" class="cta-button">Get My Free Assessment</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
